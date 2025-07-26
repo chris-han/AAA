@@ -14,7 +14,7 @@
 2. **Game Objects**
    - Cake Base (胚): Multiple cake base models with adjustable size and color.
    - Cream: Cream blobs and streams with adjustable thickness and color.
-   - Knife: A stylized knife with a blade and handle, capable of rotation.
+   - Knife: A cute knife with a blade and handle for cake cutting, capable of rotation.
 
 3. **UI Elements**
    - Mouse cursor icons for different modes (cake base, cream, knife).

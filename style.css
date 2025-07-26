@@ -13,10 +13,37 @@ canvas {
     background-image: url('assets/trash_bin.glb'); /* Placeholder */
     background-size: contain;
 }
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
 #ui-container {
     position: absolute;
     top: 10px;
     right: 10px;
+    z-index: 100;
+}
+
+#object-list-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    max-height: 90%;
+    overflow-y: auto;
+}
+
+#object-list {
+    list-style: none;
+    padding: 0;
+}
+
+#object-list li {
+    margin-bottom: 5px;
 }
 button {
     padding: 10px;
