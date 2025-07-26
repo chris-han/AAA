@@ -14,7 +14,7 @@ This document outlines the technical requirements and implementation details for
 - **Cake Base Mode (Key 1):**
   - Mouse cursor shows cake base.
   - Move cake base with mouse; spacebar to drop.
-  - Right-click and hold to drag placed cake base.
+  - Right-click and hold to drag placed cake base; release to drop.
 - **Cream Mode (Key 2):**
   - Mouse cursor shows cream with visible thickness and color.
   - Left mouse button to extrude cream; extrusion duration depends on press length.

@@ -40,7 +40,7 @@
 ### Cake Base Mode (`1`)
 - Cursor shows a cake base model following mouse position.
 - Left-click (spacebar) drops the cake base onto the table.
-- Right-click and hold on a placed cake base allows dragging to reposition.
+- Right-click and hold on a placed cake base allows dragging to reposition; release to drop.
 - Cake base size and color can be adjusted before dropping.
 - Multiple cake bases can be placed; when cut, each piece becomes an independent cake base.
 

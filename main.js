@@ -118,7 +118,7 @@ function init() {
 
         const userGuideFolder = gui.addFolder('User Guide');
         userGuideFolder.add({
-            guide: 'Press 1 for Cake Base Mode\nPress 2 for Cream Mode\nPress 3 for Knife Mode\nPress Enter for Appreciation Mode\n\nCake Base Mode:\n  Left-click (spacebar) to drop cake\n  Right-click and drag to reposition\n\nCream Mode:\n  Left-click and hold to extrude cream\n  Right-click to remove cream\n\nKnife Mode:\n  A/D to rotate knife\n  Left-click to cut/smooth\n\nTurntable:\n  W/S to rotate turntable'
+            guide: 'Press 1 for Cake Base Mode\nPress 2 for Cream Mode\nPress 3 for Knife Mode\nPress Enter for Appreciation Mode\n\nCake Base Mode:\n  Left-click (spacebar) to drop cake\n  Right-click and drag to reposition, release to drop\n\nCream Mode:\n  Left-click and hold to extrude cream\n  Right-click to remove cream\n\nKnife Mode:\n  A/D to rotate knife\n  Left-click to cut/smooth\n\nTurntable:\n  W/S to rotate turntable'
         }, 'guide').name('Instructions').disable();
         userGuideFolder.open();
 
@@ -221,6 +221,7 @@ function init() {
                 const intersects = raycaster.intersectObject(turntable, true);
                 if (intersects.length > 0) {
                     selectedCake.position.copy(intersects[0].point);
+                    selectedCake.position.y += (selectedCake.scale.y * 0.5); // Adjust Y to place cake on top of turntable
                 }
             }
         });
@@ -323,6 +324,7 @@ function init() {
                     const intersects = raycaster.intersectObject(turntable, true);
                     if (intersects.length > 0) {
                         cakeBase.position.copy(intersects[0].point);
+                        cakeBase.position.y += (guiParams.cakeSize * 0.5); // Adjust Y to place cake on top of turntable
                         cakeBase.visible = true;
                     } else {
                         cakeBase.visible = false;
